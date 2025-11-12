@@ -1,0 +1,29 @@
+﻿@page
+@model QHRM_CodingTest.Pages.CreateModel
+@{
+    ViewData["Title"] = "Add Product";
+}
+
+<div class="container mt-4">
+    <h2>Add Product</h2>
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input asp-for="Product.Name" class="form-control" />
+            <span asp-validation-for="Product.Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <input asp-for="Product.Description" class="form-control" />
+            <span asp-validation-for="Product.Description" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Price</label>
+            <input asp-for="Product.Price" class="form-control" type="number"
+                   step="0.01" />
+            <span asp-validation-for="Product.Price" class="text-danger"></span>
+        </div>
+        <button class="btn btn-primary" type="submit">Save</button>
+        <a class="btn btn-secondary ms-2" href="/">Cancel</a>
+    </form>
+</div>
